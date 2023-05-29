@@ -1,0 +1,43 @@
+import java.util.*;
+class learn{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int[] arr = {5, 3, 9, 6, 7};
+        int maxx = max_arr(arr, 5);
+        int minn = min_arr(arr, 5);
+        int sum = sum(arr, 5);
+        int avg = sum(arr, 5)/5;
+        System.out.println(maxx);
+        System.out.println(minn);
+        System.out.println(sum);
+        System.out.println(avg);
+
+    }
+
+
+    public static int max_arr(int[] arr, int n){
+        int max_num = 0;
+        for(int i = 0; i < n; i++){
+            if (arr[i] >= max_num){
+                max_num = arr[i];
+            }
+        }
+        return max_num;
+    }
+    public static int min_arr(int[] arr, int n){
+        int min_num = 9999999;
+        for(int i = 0; i < n; i++){
+            if (arr[i] <= min_num){
+                min_num = arr[i];
+            }
+        }
+        return min_num;
+    }
+    public static int sum(int[] arr, int n){
+        int sum = 0;
+        for(int i = 0; i < n; i++){
+            sum += arr[i];
+        }
+        return sum;
+    } 
+}
